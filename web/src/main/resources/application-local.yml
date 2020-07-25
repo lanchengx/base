@@ -1,0 +1,14 @@
+spring:
+  profiles: local
+
+---
+spring:
+  datasource:
+    url: jdbc:mysql://39.108.219.177:3306/base?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
+    username: root
+    password: 123456
+
+---
+swagger:
+  enable: true
+
