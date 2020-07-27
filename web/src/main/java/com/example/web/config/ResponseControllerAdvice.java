@@ -1,7 +1,7 @@
 package com.example.web.config;
 
 import com.example.common.common.base.model.ResultModel;
-import com.example.common.common.utils.ExceptionUtils;
+import com.example.common.common.utils.ExceptionUtil;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.core.MethodParameter;
@@ -33,7 +33,7 @@ public class ResponseControllerAdvice implements ResponseBodyAdvice<Object> {
                 // 将数据包装在ResultVO里后，再转换为json字符串响应给前端
                 return objectMapper.writeValueAsString(ResultModel.ok(data));
             } catch (JsonProcessingException e) {
-                throw ExceptionUtils.newServiceException("返回String类型错误");
+                throw ExceptionUtil.newServiceException("返回String类型错误");
             }
         }
         // 将原本的数据包装在ResultVO里

@@ -1,5 +1,6 @@
 package com.example.common.common.utils;
 
+import cn.hutool.core.util.ReUtil;
 import com.google.common.base.Strings;
 import org.springframework.beans.BeanUtils;
 import org.springframework.util.CollectionUtils;
@@ -13,7 +14,7 @@ import java.util.regex.Pattern;
  * @Author: lanchengx
  * @Date: 2020/7/25 0025
  */
-public class RegexUtils {
+public class RegexUtil extends ReUtil {
 
     /**
      * 邮箱校验
